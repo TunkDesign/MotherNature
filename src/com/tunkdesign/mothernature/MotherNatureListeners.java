@@ -36,7 +36,7 @@ public class MotherNatureListeners implements Listener {
 
   @EventHandler(priority = EventPriority.MONITOR)
        public void onPlayerInteract(PlayerInteractEvent event) {
-  	if((event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) && event.hasItem() && event.getItem().getTypeId() == MotherNatureSettings.lightningWand && MotherNaturePermissions.has(event.getPlayer(), "mothernature.lwand"))
+  	if((event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) && event.hasItem() && event.getItem().getTypeId() == MotherNature.lightningWand && MotherNaturePermissions.has(event.getPlayer(), "mothernature.lwand"))
           event.getPlayer().getWorld().strikeLightning(event.getPlayer().getTargetBlock(null, 500).getLocation());
        }
 
