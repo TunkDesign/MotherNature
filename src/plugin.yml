@@ -1,0 +1,11 @@
+name: MotherNature
+main: com.TunkDesign.MotherNature.MotherNature
+version: 1.3.3
+
+commands:
+
+    mn:
+
+        description: Adjust the weather
+
+        usage: /<command> help
