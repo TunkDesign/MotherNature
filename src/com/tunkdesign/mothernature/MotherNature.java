@@ -2,14 +2,13 @@ package com.TunkDesign.MotherNature;
 
 //Java import
 import java.util.*;
+import java.io.File;
 //Local import
 import com.TunkDesign.MotherNature.thread.MotherNatureThread;
 //Bukkit import
 import org.bukkit.World;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import java.io.File;
-//import java.io.IOException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -19,12 +18,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public class MotherNature extends JavaPlugin
 {
-	File configFile;
-    File groupsFile;
-    File historyFile;
+    File configFile;
     FileConfiguration config;
-    FileConfiguration groups;
-    FileConfiguration history;
     
     public MotherNature()
     {
@@ -54,7 +49,6 @@ public class MotherNature extends JavaPlugin
     {
     	loadConfiguration();
     	config = new YamlConfiguration();
-//    	loadYamls();
     	configFile = new File(getDataFolder(), "config.yml");
     	PluginManager pm = getServer().getPluginManager();
         MotherNatureSettings.load();
@@ -74,54 +68,15 @@ public class MotherNature extends JavaPlugin
         }
 
         /* Register Events */
-//        listeners = MotherNatureListeners.load(this);
         pm.registerEvents(this.playerListeners, this);
         log.info((new StringBuilder("Plugin enabled! (version ")).append(getDescription().getVersion()).append(")").toString());
         log.debug("Debug mode enabled!");
     }
     
     public void loadConfiguration(){
-        //See "Creating you're defaults"
-        getConfig().options().copyDefaults(true); // NOTE: You do not have to use "plugin." if the class extends the java plugin
-        //Save the config whenever you manipulate it
+        getConfig().options().copyDefaults(true); 
         saveConfig();
     }
-    
-//    private void firstRun() throws Exception {
-//        if(!configFile.exists()){
-//            configFile.getParentFile().mkdirs();
-//            copy(getResource("config.yml"), configFile);
-//        }
-//    }
-//    private void copy(InputStream in, File file) {
-//        try {
-//            OutputStream out = new FileOutputStream(file);
-//            byte[] buf = new byte[1024];
-//            int len;
-//            while((len=in.read(buf))>0){
-//                out.write(buf,0,len);
-//            }
-//            out.close();
-//            in.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public void saveYamls() {
-//        try {
-//            config.save(configFile);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//    public void loadYamls() {
-//        try {
-//            config.load(configFile);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
     
     public static final MotherNatureLogging log = new MotherNatureLogging();
     private MotherNatureCommand commandHandler;
