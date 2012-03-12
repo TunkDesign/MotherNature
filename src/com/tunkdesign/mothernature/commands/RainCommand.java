@@ -1,9 +1,10 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Local import
 import com.TunkDesign.MotherNature.*;
 import com.TunkDesign.MotherNature.thread.MotherNatureThread;
+//Bukkit import
 import org.bukkit.ChatColor;
-//import org.bukkit.World;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 
@@ -23,7 +24,7 @@ public class RainCommand
             if(args.length <= 1)
             {
                 player.getWorld().setStorm(true);
-                MotherNatureThread.rainSteps = MotherNatureSettings.rainInterval;
+                MotherNatureThread.rainSteps = MotherNature.rainInterval;
                 player.sendMessage((new StringBuilder()).append(ChatColor.GREEN).append("You have changed the weather to").append(ChatColor.GOLD).append(" Rain").toString());
             }
         } else
