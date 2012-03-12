@@ -68,9 +68,10 @@ public class MotherNatureUpdate
       return formattedSource[1];
   }
 
-  public static String Prefix = "[QuesterUD] ";
+  public static String Prefix = "[MotherNature] ";
   public static double latestVersionID = 0.0D;
   public static double currentVersionID = 1.1000000000000001D;
   public static Logger log = Logger.getLogger("Minecraft");
 
 }
+	
