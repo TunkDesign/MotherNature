@@ -1,0 +1,37 @@
+package com.TunkDesign.MotherNature.commands;
+
+//import java.util.List;
+import com.TunkDesign.MotherNature.MotherNature;
+import com.TunkDesign.MotherNature.MotherNaturePermissions;
+import org.bukkit.*;
+import org.bukkit.command.*;
+import org.bukkit.entity.Player;
+
+public class NightCommand
+    implements CommandExecutor
+{
+
+    public NightCommand(MotherNature parent)
+    {
+        this.parent = parent;
+    }
+
+    public boolean onCommand(CommandSender sender, Command command, String commandLabel, String args[])
+    {
+        World world = (sender instanceof Player) ? ((Player)sender).getWorld() : (World)parent.getServer().getWorlds().get(0);
+        world.getTime();
+        Player player = (Player)sender;
+        if(!player.equals(null))
+            if(MotherNaturePermissions.has(player, "mothernature.command.night"))
+            {
+                world.setTime(13000L);
+                player.sendMessage((new StringBuilder()).append(ChatColor.GREEN).append("You have changed the time to").append(ChatColor.GOLD).append(" Sunset").toString());
+            } else
+            {
+                sender.sendMessage((new StringBuilder()).append(ChatColor.RED).append("You don't have permission to change the server time to day").toString());
+            }
+        return false;
+    }
+
+    private MotherNature parent;
+}
