@@ -1,11 +1,12 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Local import
 import com.TunkDesign.MotherNature.MotherNature;
 import com.TunkDesign.MotherNature.MotherNaturePermissions;
+//Bukkit import
 import org.bukkit.ChatColor;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
-//import org.bukkit.plugin.PluginDescriptionFile;
 
 public class VersionCommand
     implements CommandExecutor
