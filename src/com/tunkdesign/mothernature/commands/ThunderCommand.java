@@ -1,9 +1,10 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Local import
 import com.TunkDesign.MotherNature.*;
 import com.TunkDesign.MotherNature.thread.MotherNatureThread;
+//Bukkit import
 import org.bukkit.ChatColor;
-//import org.bukkit.World;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 
@@ -22,8 +23,8 @@ public class ThunderCommand
         {
             player.getWorld().setStorm(true);
             player.getWorld().setThundering(true);
-            MotherNatureThread.thunderSteps = MotherNatureSettings.thunderInterval;
-            MotherNatureThread.rainSteps = MotherNatureSettings.rainInterval;
+            MotherNatureThread.thunderSteps = MotherNature.thunderInterval;
+            MotherNatureThread.rainSteps = MotherNature.rainInterval;
             player.sendMessage((new StringBuilder()).append(ChatColor.GREEN).append("You have changed the weather to").append(ChatColor.GOLD).append(" Thunder").toString());
         } else
         {
