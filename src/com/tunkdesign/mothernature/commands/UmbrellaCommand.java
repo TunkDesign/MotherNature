@@ -1,8 +1,10 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Local import
 import com.Android.magiccarpet.Carpet;
 import com.TunkDesign.MotherNature.MotherNature;
 import com.TunkDesign.MotherNature.MotherNaturePermissions;
+//Bukkit import
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.*;
