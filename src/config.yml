@@ -24,4 +24,4 @@ mothernature:
         interval: 600
 
 # This is the item id of the lightning wand.
-    wand: 317 # GOLD_BOOTS
+    wand: 369 # BLAZE_ROD
