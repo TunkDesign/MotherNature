@@ -21,18 +21,18 @@ public class MotherNatureLogging
 
   public void debug(String s)
   {
-      if(MotherNatureSettings.debugMode)
-          logger.log(Level.INFO, (new StringBuilder("[MotherNature DEBUG] ")).append(s).toString());
+      if(MotherNature.debugMode)
+          logger.log(Level.INFO, (new StringBuilder("[MotherNature] DEBUG: ")).append(s).toString());
   }
 
   public void severe(String s)
   {
-      logger.log(Level.SEVERE, (new StringBuilder("[MotherNature] ")).append(s).toString());
+      logger.log(Level.SEVERE, (new StringBuilder("[MotherNature] SEVERE: ")).append(s).toString());
   }
 
   public void warning(String s)
   {
-      logger.log(Level.WARNING, (new StringBuilder("[MotherNature] ")).append(s).toString());
+      logger.log(Level.WARNING, (new StringBuilder("[MotherNature] WARNING: ")).append(s).toString());
   }
 
   public static final Logger logger = Logger.getLogger("Minecraft");
