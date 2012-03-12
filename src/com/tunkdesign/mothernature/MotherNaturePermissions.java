@@ -30,7 +30,7 @@ public class MotherNaturePermissions {
   }
 
   /**
-   * Check if permissions is installed, and initiate it
+   * Check if any permission plugin is installed, and initiate it
    */
   public static void load( MotherNature parent ) {
 	MotherNature.log.debug("Loading Permissions handler");
