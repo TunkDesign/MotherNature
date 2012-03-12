@@ -41,10 +41,12 @@ public class MotherNatureHelp
       helpCommands.add(new String[] {
           "mn sun", "Tells the current world to be sunny", "mothernature.command.sun"
       });
+     
       /* Not working properly */
 //      helpCommands.add(new String[] {
 //          "mn umbrella", "Gives you an umbrella over your head", "mothernature.command.umbrella"
 //      });
+      
       helpCommands.add(new String[] {
           "mn sunrise", "Changes server time to morning", "mothernature.command.day"
       });
