@@ -1,0 +1,27 @@
+############################################################
+# +------------------------------------------------------+ #
+# |              MotherNature Configuration              | #
+# +------------------------------------------------------+ #
+############################################################
+
+mothernature:
+
+# Setting 'debug' to true makes MotherNature print EVERYTHING it does in the console.
+    debug: false
+
+# This sets the duration and the interval of Thunder, in seconds.
+    thunder:
+        duration: 30
+        interval: 60
+        
+# Not working properly
+#    umbrellatype: 'null'
+#    umbrellaMiddletype: 'null'
+
+# This sets the duration and the interval of Rain, in seconds.
+    rain:
+        duration: 120
+        interval: 600
+
+# This is the item id of the lightning wand.
+    wand: 317 # GOLD_BOOTS
