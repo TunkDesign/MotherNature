@@ -1,10 +1,11 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Local import
 import com.TunkDesign.MotherNature.MotherNature;
 import com.TunkDesign.MotherNature.MotherNaturePermissions;
 import com.TunkDesign.MotherNature.thread.MotherNatureThread;
+//Bukkit import
 import org.bukkit.ChatColor;
-//import org.bukkit.World;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 
