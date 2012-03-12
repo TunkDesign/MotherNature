@@ -11,8 +11,6 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public class MotherNatureSettings extends JavaPlugin {
 	File configFile;
-    File groupsFile;
-    File historyFile;
     FileConfiguration config;
 
 
@@ -30,23 +28,15 @@ public class MotherNatureSettings extends JavaPlugin {
       dataDirectory.mkdirs();
       File file = new File((new StringBuilder("plugins")).append(File.separator).append("MotherNature").toString(), "config.yml");
       MotherNature.log.debug((new StringBuilder("Loading config file: ")).append(file.getPath()).toString());
-//      config.load();
       if(!file.exists())
       {
           MotherNature.log.debug("Config file not found, saving bare-bones file");
-//          config.setProperty("mothernature.debug", Boolean.valueOf(debugMode));
           HashMap<String, Integer> rainHash = new HashMap<String, Integer>();
           rainHash.put("interval", Integer.valueOf(rainInterval));
           rainHash.put("duration", Integer.valueOf(rainLength));
-//          config.setProperty("mothernature.rain", rainHash);
           HashMap<String, Integer> thunderHash = new HashMap<String, Integer>();
           thunderHash.put("interval", Integer.valueOf(thunderInterval));
           thunderHash.put("duration", Integer.valueOf(thunderLength));
-//          config.setProperty("mothernature.thunder", thunderHash);
-//          config.setProperty("mothernature.wand", Integer.valueOf(lightningWand));
-//          config.setProperty("mothernature.umbrellatype", String.valueOf(materialName));
-//          config.setProperty("mothernature.umbrellaMiddletype", String.valueOf(MaterialMidName));
-//          config.save();
       }
       setSettings();
       MotherNature.log.debug("Settings loaded");
@@ -57,6 +47,8 @@ public class MotherNatureSettings extends JavaPlugin {
    */
   private static void setSettings()
   {
+  	// TODO: Fix setSettings
+  	
 //      debugMode = config.getBoolean("mothernature.debug", false);
 //      rainInterval = config.getInt("mothernature.rain.interval", rainInterval);
 //      rainLength = config.getInt("mothernature.rain.duration", rainLength);
@@ -78,6 +70,5 @@ public class MotherNatureSettings extends JavaPlugin {
   public static int thunderInterval = 60;
   public static int lightningWand = 317;
   public static String materialName = null;
-//  public static Configuration config = null;
   public static String MaterialMidName = null;
 }
