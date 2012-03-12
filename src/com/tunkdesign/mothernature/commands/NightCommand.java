@@ -1,8 +1,9 @@
 package com.TunkDesign.MotherNature.commands;
 
-//import java.util.List;
+//Local import
 import com.TunkDesign.MotherNature.MotherNature;
 import com.TunkDesign.MotherNature.MotherNaturePermissions;
+//Bukkit import
 import org.bukkit.*;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
