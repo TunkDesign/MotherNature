@@ -1,9 +1,10 @@
 package com.TunkDesign.MotherNature.thread;
 
+//Java import
 import java.util.Iterator;
-//import java.util.List;
+//Local import
 import com.TunkDesign.MotherNature.*;
-//import org.bukkit.Server;
+//Bukkit import
 import org.bukkit.World;
 
 public class MotherNatureThread
