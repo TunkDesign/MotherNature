@@ -1,5 +1,4 @@
-MotherNature
-============
+== MotherNature ==
 Originally made by: yetanotherx
 Forked & Updated by: TunkDesign
 Website: http://tunkdesign.com/
@@ -17,5 +16,28 @@ MotherNature is a plugin for Bukkit, that let's you control the weather.
 1. Upload MotherNature.jar to your plugins folder.
 2. Reload/Restart the server.
 
+
+== Permission Nodes ==
+
+MN SUNRISE
+  mothernature.command.day
+MN HELP
+  mothernature.command.help
+MN STRIKE [PLAYER]
+  mothernature.command.strike
+MN LWAND
+  mothernature.command.lwand
+MN SUNRISE
+  mothernature.command.night
+MN RAIN
+  mothernature.command.rain
+MN RELOAD
+  mothernature.command.reload
+MN SUN
+  mothernature.command.sun
+MN THUNDER
+  mothernature.command.thunder
+MN VERION
+  mothernature.command.version
 
 ---More to be added---
