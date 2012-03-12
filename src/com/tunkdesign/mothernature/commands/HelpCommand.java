@@ -1,8 +1,11 @@
 package com.TunkDesign.MotherNature.commands;
 
+//Java import
 import java.util.ArrayList;
 import java.util.Iterator;
+//Local import
 import com.TunkDesign.MotherNature.*;
+//Bukkit import
 import org.bukkit.ChatColor;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
